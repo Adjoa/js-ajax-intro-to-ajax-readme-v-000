@@ -1,6 +1,7 @@
 function showRepositories(event, data) {
-  console.log(JSON.parse(this.responseText))
-  let repoList = "<ul>"
+  let repos = JSON.parse(this.responseText)
+  console.log(repos)
+  const repoList = "<ul>"
     for(let i=0; i < this.responseText.length; i++) {
       repoList += "<li>" + this.responseText[i]["name"] + "</li>"
     }
